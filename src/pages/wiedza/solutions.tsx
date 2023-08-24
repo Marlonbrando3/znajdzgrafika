@@ -6,7 +6,7 @@ export default function MoreAbout() {
     <div className='w-screen h-screen bg-[url("/photo.jpeg")] bg-cover '>
       <div className='md:w-[1000px] mx-auto'>
       <div className='text-white w-full px-[10px] mb-[20px] text-[30px] flex justify-start'>
-        <div className='bg-green-700 px-[15px] h-[90px] text-[15px] flex pt-[40px] fixed'><p>Jesteś w: <br></br><b>Jakie problemy rozwiążemy</b></p></div>
+        <div className='bg-green-700 px-[15px] h-[90px] text-[15px] flex pt-[40px]'><p>Jesteś w: <br></br><b>Jakie problemy rozwiążemy</b></p></div>
       </div>
       <div className='bg-white/[0.9] text-[20px] pl-[10px] pr-[10px] mt-[140px]'>Portal ma służyć grafikom oraz pracodawcom, którzy szukają grafików do zatrudnienia do swoich firm. Rozwiązuje problem trudności w ocenieniu kwalifikacji podczas czystej rozmowy rekrutacyjnej. Rekruterzy często nie są specjalistami w obszarach grafiki a zarządzają zespołami, dzięki temu rozwiązaniu będziesz można zapoznać się z prawdziwymi umiejętnościami grafików ustaleniem czy podczas rozmowy z kandydatem używając danych terminów mówicie o tym samym oraz czy prace danej osoby spełniają założenia wydajności i tempa ich wykonania.<br></br>
       Zapraszamy do pozostawienia adresu email aby otrzymać informację o aktualizacji prac oraz nowych funkcjonalnościach uzupełniając formularz.</div>
