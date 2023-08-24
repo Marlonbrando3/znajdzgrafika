@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function MoreAbout() {
   return (
-    <div className='w-screen h-screen bg-[url("/photo.jpeg")] bg-cover relative'>
+    <div className='w-screen h-screen bg-[url("/photo.jpeg")] bg-cover'>
       <div className='md:w-[1000px] mx-auto'>
       <div className='text-white w-full px-[10px] mb-[20px] text-[30px] flex justify-start'>
         <div className='bg-green-700 px-[15px] h-[90px] text-[15px] flex pt-[40px] fixed'><p>Jesteś w: <br></br><b>Jakie problemy rozwiążemy</b></p></div>
