@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import {useRef} from 'react'
 import Head from 'next/head'
@@ -11,6 +12,7 @@ export default function Home() {
   const name:any = useRef();
   const company:any = useRef();
   const mail:any = useRef();
+  const aprovalwindow:any = useRef();
 
   const handleSendForm = (e:any) => {
     e.preventDefault();
@@ -27,20 +29,20 @@ export default function Home() {
             mail: mail.current.value,
         })
     })
-        // .then(res => res.json())
-        // .then(data => {
-        //     if (data.info === "sendet") {
-        //         console.log("wysłano maila")
-        //         aprovalwindow.current.style.width = "100%"
+        .then(res => res.json())
+        .then(data => {
+            if (data.info === "sendet") {
+                console.log("wysłano maila")
+                aprovalwindow.current.style.visibility = "visible"
 
-        //         setTimeout(() => {
-        //             aprovalwindow.current.style.width = "0px"
+                setTimeout(() => {
+                    aprovalwindow.current.style.visibility = "hidden"
 
-        //         }, 5000)
-        //     } else {
-        //         console.log("niewysłano ")
-        //     }
-        // })
+                }, 5000)
+            } else {
+                console.log("niewysłano ")
+            }
+        })
 }
 
 
@@ -52,7 +54,6 @@ export default function Home() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'G-VTLH3RL910');`}
         </Script>
     <Head>
@@ -76,8 +77,19 @@ export default function Home() {
     </div>
     </div>
     <div className='md:w-1/2 h-screen flex items-center justify-center relative'>
-      <div className='bg-red-700 w-[1200px] h-[500px] rounded-[10px] -right-[200px] md:-mr-[900px] flex items-center'>
-      <form onSubmit={handleSendForm} className='b p-[20px] flex flex-col rounded-md w-[400px] text-[18px] z-10'>
+      <div className='bg-red-700 w-[1200px] h-[500px] rounded-[10px] -right-[200px] md:-mr-[900px] flex items-start flex-col'>
+      <div className='flex justify-center pt-[5px] w-[200px] mx-auto md:mx-[140px]'>
+          <Link href="/wiedza/more"><div className='md:w-[150px] w-[120px] h-[50px] bg-white mx-[4px] rounded shadow-md px-[10px] flex items-center justify-center border border-white font-bold leading-5 text-center hover:text-white hover:bg-green-700 duration-150 cursor-pointer'><p>Więcej o projekcie</p></div></Link>
+          <Link href="/wiedza/solutions"><div className='md:w-[150px] w-[120px] h-[50px] text-[14px] md:text-auto bg-white mx-[4px] rounded shadow-md flex items-center justify-center border border-white font-bold leading-5 text-center hover:text-white hover:bg-green-700 duration-150 cursor-pointer'>Jakie problemy rozwiążemy</div></Link>
+          <Link href="/wiedza/pricing"><div className='md:w-[150px] w-[120px] h-[50px] bg-white mx-[4px] rounded shadow-md px-[10px] flex items-center justify-center border border-white font-bold leading-5 text-center hover:text-white hover:bg-green-700 duration-150 cursor-pointer'>Ile to będzie kosztować?</div></Link>
+        </div>
+      <form onSubmit={handleSendForm} className='b md:p-[20px] flex flex-col rounded-md md:w-[400px] w-[320px] text-[18px] z-10 relative mx-auto md:mx-0'>
+          <div ref={aprovalwindow} className='absolute invisible bg-red-700 w-full h-full right-0 left-0 mx-auto z-20 flex items-center justify-center flex-col rounded-md  border-green-700'>
+          <div className='text-[24px] flex items-center justify-center flex-col'>
+            <p className='bg-green-800 text-white px-[10px]'>Dziekujęmy!</p>
+            <p className='bg-green-800 text-white px-[10px]'>Wiadomość wysłana</p>
+          </div>
+        </div>
         <label data-for="name" className='text-white'>Imię i nazwisko reprezentanta</label>
         <input ref={name} className='border mb-[18px] h-[50px] rounded-[10px]' data-type="text" required ></input>
         <label data-for="comapany" className='text-white'>Nazwa firmy</label>
