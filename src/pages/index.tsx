@@ -14,14 +14,16 @@ export default function Home() {
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap" rel="stylesheet"></link>
     </Head>
    <div className=' w-screen md:h-screen h-[940px] bg-[url("/photo.jpeg")] bg-cover flex flex-col md:flex-row'>
-    <div className='w-full md:w-1/2 h-screen text-center flex justify-center items-center'>
+    <div className='w-full md:w-1/2 h-screen text-center flex justify-center items-center ml-[10px]'>
       <div className='w-[600px] leading-9 text-left'>
       <span className='bg-white w-[600px] text-[30px] px-[10px]'>Zatrudnienie<br></br></span>
-      <span className='bg-white w-[600px] text-[40px] px-[10px] text-green-600 font-bold'>doświadczonego grafika jest... </span>
+      <span className='bg-white w-[600px] text-[40px] pr-[10px] text-green-600 font-bold'>doświadczonego grafika jest... </span>
       <span className='bg-white w-[600px] text-[60px] px-[10px] text-red-600 font-bold leading-[60px]'>trudne?<br></br> </span>
-      <span className='bg-white w-[600px] text-[30px] px-[10px] leading-[60px]'>Właśnie tworzymy dla Ciebie<br></br> </span>
-      <span className='bg-white w-[600px] text-[40px] px-[10px] text-green-600 font-bold leading-6'>bazę idealnych kandydatów<br></br><br></br></span>
-      <span className='bg-white w-[600px] md:text-[40px] px-[10px] text-red-600 font-bold leading-[40px]'>zostaw maila i bądź na bieżąco z projektem<br></br></span>
+      <span className='bg-white w-[600px] text-[30px] px-[10px] leading-[60px]'>Tworzymy dla Ciebie<br></br> </span>
+      <span className='bg-white w-[600px] text-[40px] pr-[10px] text-green-600 font-bold leading-9 md:leading-6'>bazę idealnych kandydatów!</span><br></br>
+      <span className='block md:h-[50px] h-[15px]'></span>
+      <span className='bg-white w-[600px] md:text-[40px] text-[28px] pr-[10px] text-red-600 font-bold leading-[1px] md:leading-[40px]'>zostaw maila i</span>
+      <span className='bg-white w-[600px] md:text-[40px] text-[28px] pr-[10px] text-red-600 font-bold leading-[0px] md:leading-[40px]'>bądź na bieżąco z projektem</span>
     </div>
     </div>
     <div className='md:w-1/2 h-screen flex items-center justify-center relative'>
