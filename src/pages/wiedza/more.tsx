@@ -4,11 +4,9 @@ import Link from 'next/link'
 export default function MoreAbout() {
   return (
     <div className='w-screen h-screen bg-[url("/photo.jpeg")] bg-cover relative'>
-      <div className='fixed w-screen h-[50px] flex justify-end'>
-      </div>
       <div className='md:w-[1000px] mx-auto'>
       <div className='text-white w-full px-[10px] mb-[20px] text-[30px] flex justify-start'>
-        <div className='bg-green-700 px-[15px] h-[90px] text-[15px] flex fixed'><p>Jesteś w: <br></br><b>Więcej o projekcie</b></p></div>
+        <div className='bg-green-700 px-[15px] h-[90px] text-[15px] flex pt-[40px] fixed'><p>Jesteś w: <br></br><b>Więcej o projekcie</b></p></div>
       </div>
       <div className='bg-white/[0.9] text-[20px] pl-[10px] pr-[10px] mt-[140px]'>Projekt jest odpowiedzią na rosnące problemy w rekrutacji na stanowiska specjalistyczne i skierowanych do wszystkich firm szukający grafika do swojej firmy oraz dla grafików, którzy szukają zatrudnienia.<br></br>
       Po naszych obserwacjach firm, które są często w ciągłej rekrutacji odpowiedniej osoby na stanowisko grafika komputerowego czy to 3D czy rendery lub nawet ulotki stawiamy tezę, że z racji tego iż specjalizacja ta jest bardzo miękka, wiele zależy od gustu i obu stronom (rekruterom jak i kandydatom) towarzyszy błąd poznawczy.
