@@ -26,7 +26,7 @@ export default function Home() {
       <span className='bg-white w-[600px] md:text-[40px] text-[28px] pr-[10px] text-red-600 font-bold leading-[0px] md:leading-[40px]'>bądź na bieżąco z projektem</span>
     </div>
     </div>
-    <div className='md:w-1/2 h-screen flex items-center justify-center relative h-auto'>
+    <div className='md:w-1/2 h-screen flex items-center justify-center relative'>
       <div className='absolute bg-red-600/[0.9] w-[900px] h-[500px] rounded-[10px] -right-[200px] rotate-6'></div>
       <form className='b p-[20px] flex flex-col rounded-md w-[600px] text-[18px] z-10'>
         <label data-for="name" className='text-white '>Imię i nazwisko reprezentanta</label>
