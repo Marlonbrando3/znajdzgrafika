@@ -1,11 +1,49 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import {useRef} from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const name:any = useRef();
+  const company:any = useRef();
+  const mail:any = useRef();
+
+  const handleSendForm = (e:any) => {
+    e.preventDefault();
+
+    fetch('/api/sendform', {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: name.current.value,
+            company: company.current.value,
+            mail: mail.current.value,
+        })
+    })
+        // .then(res => res.json())
+        // .then(data => {
+        //     if (data.info === "sendet") {
+        //         console.log("wysłano maila")
+        //         aprovalwindow.current.style.width = "100%"
+
+        //         setTimeout(() => {
+        //             aprovalwindow.current.style.width = "0px"
+
+        //         }, 5000)
+        //     } else {
+        //         console.log("niewysłano ")
+        //     }
+        // })
+}
+
+
   return (
     <>
          {/* <!-- Google tag (gtag.js) --> */}
@@ -39,13 +77,13 @@ export default function Home() {
     </div>
     <div className='md:w-1/2 h-screen flex items-center justify-center relative'>
       <div className='bg-red-700 w-[1200px] h-[500px] rounded-[10px] -right-[200px] md:-mr-[900px] flex items-center'>
-      <form className='b p-[20px] flex flex-col rounded-md w-[400px] text-[18px] z-10'>
-        <label data-for="name" className='text-white '>Imię i nazwisko reprezentanta</label>
-        <input className='border mb-[18px] h-[50px] rounded-[10px]'></input>
+      <form onSubmit={handleSendForm} className='b p-[20px] flex flex-col rounded-md w-[400px] text-[18px] z-10'>
+        <label data-for="name" className='text-white'>Imię i nazwisko reprezentanta</label>
+        <input ref={name} className='border mb-[18px] h-[50px] rounded-[10px]' data-type="text" required ></input>
         <label data-for="comapany" className='text-white'>Nazwa firmy</label>
-        <input className='border mb-[18px] h-[50px] rounded-[10px]'></input>
+        <input ref={company} className='border mb-[18px] h-[50px] rounded-[10px]' data-type="text" required></input>
         <label data-for="name" className='text-white'>Adres email</label>
-        <input className='border mb-[28px] h-[50px] rounded-[10px]'></input>
+        <input ref={mail} className='border mb-[28px] h-[50px] rounded-[10px]' data-type="email" required></input>
         <button className='bg-white text-green-600 w-[130px] h-[50px] rounded-[5px]'>Wyślij</button>
       </form>
       </div>
