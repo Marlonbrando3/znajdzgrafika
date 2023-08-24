@@ -15,7 +15,7 @@ export default function Home() {
     </Head>
    <div className=' w-screen md:h-screen h-[940px] bg-[url("/photo.jpeg")] bg-cover flex flex-col md:flex-row'>
     <div className='w-full md:w-1/2 h-screen text-center flex justify-center items-center ml-[10px]'>
-      <div className='w-[600px] leading-9 text-left'>
+      <div className='w-[600px] leading-9 text-left '>
       <span className='bg-white w-[600px] text-[30px] px-[10px]'>Zatrudnienie<br></br></span>
       <span className='bg-white w-[600px] text-[40px] pr-[10px] text-green-600 font-bold'>doświadczonego grafika jest... </span>
       <span className='bg-white w-[600px] text-[60px] px-[10px] text-red-600 font-bold leading-[60px]'>trudne?<br></br> </span>
